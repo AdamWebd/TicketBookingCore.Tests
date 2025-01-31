@@ -10,6 +10,11 @@ namespace TicketBookingCore
 
         public TicketBookingResponse Book(TicketBookingRequest request)
         {
+            if (request is null)
+            {
+                throw new ArgumentNullException(nameof(request));
+            }
+
             //Refactor för att returnera en ny TicketBookingResponse
             return new TicketBookingResponse
             {

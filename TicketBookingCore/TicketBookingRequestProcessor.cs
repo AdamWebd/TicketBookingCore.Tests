@@ -23,7 +23,7 @@ namespace TicketBookingCore
                 Email = request.Email
             };
 
-            _ticketBookingRepository.Save(ticket);
+            _ticketBookingRepository.Save();
 
             //Refactor för att returnera en ny TicketBookingResponse
             return new TicketBookingResponse
